@@ -1,0 +1,65 @@
+#Question  no 1 :
+hours = float(input("Enter the number of hours worked: "))
+rate = float(input("Enter the hourly rate: "))
+
+if hours <= 40:
+    total_pay = hours * rate
+else:
+    regular_pay = 40 * rate
+    overtime_hours = hours - 40
+    overtime_pay = overtime_hours * (rate * 1.5)
+    total_pay = regular_pay + overtime_pay
+
+print("Total pay is:", total_pay)
+
+
+#Question no 2:
+
+name = input("Enter student name: ")
+roll_no = input("Enter roll number: ")
+
+
+sub1 = float(input("Enter marks for Subject 1: "))
+sub2 = float(input("Enter marks for Subject 2: "))
+sub3 = float(input("Enter marks for Subject 3: "))
+sub4 = float(input("Enter marks for Subject 4: "))
+sub5 = float(input("Enter marks for Subject 5: "))
+
+
+total_marks = sub1 + sub2 + sub3 + sub4 + sub5
+percentage = (total_marks / 500) * 100
+
+
+if percentage >= 80 and percentage <= 100:
+    grade = "A+"
+elif percentage >= 70:
+    grade = "A"
+elif percentage >= 60:
+    grade = "B"
+elif percentage >= 50:
+    grade = "C"
+elif percentage >= 40:
+    grade = "D"
+else:
+    grade = "F"
+
+if sub1 < 40 or sub2 < 40 or sub3 < 40 or sub4 < 40 or sub5 < 40:
+    result = "Fail"
+elif percentage < 40:
+    result = "Fail"
+else:
+    result = "Pass"
+
+print("\n--- STUDENT MARKSHEET ---")
+print("Name:", name)
+print("Roll Number:", roll_no)
+print("Subject 1:", sub1)
+print("Subject 2:", sub2)
+print("Subject 3:", sub3)
+print("Subject 4:", sub4)
+print("Subject 5:", sub5)
+print("Total Marks:", total_marks, "/ 500")
+print("Percentage:", percentage, "%")
+print("Grade:", grade)
+print("Result:", result)
+print("-------------------------")
